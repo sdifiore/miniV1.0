@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@{ 
+    string site = "Manuela Ibi Nutrição Integrada";
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - miniV1._0</title>
+    <title>@ViewData["Title"] - @site</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">miniV1._0</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">@site</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -38,13 +42,11 @@
         </div>
     </nav>
 
-    <partial name="_CookieConsentPartial" />
-
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - miniV1._0</p>
+            <p>&copy; 2018 - @site</p>
         </footer>
     </div>
 

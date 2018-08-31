@@ -1,26 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Início";
 }
+
+<partial name="../Shared/LogoView.cshtml" />
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        @*<li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>*@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
+                    Saiba mais da Manuela Ibi Nutrição Integrada.
+                    <a class="btn btn-default" asp-controller="Home" asp-action="Index">
+                        Mais informações
                     </a>
                 </p>
             </div>
         </div>
-        <div class="item">
+        @*<div class="item">
             <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
@@ -30,8 +32,8 @@
                     </a>
                 </p>
             </div>
-        </div>
-        <div class="item">
+        </div>*@
+        @*<div class="item">
             <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
@@ -41,7 +43,7 @@
                     </a>
                 </p>
             </div>
-        </div>
+        </div>*@
     </div>
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -55,10 +57,17 @@
 
 <div class="row">
     <div class="col-md-3">
-        <h2>Application uses</h2>
+        <h2>Receitas</h2>
         <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            <li><a asp-controller="Receitas" asp-action="Coscous_couve_flor">Coscous de couve-flor</a></li>
+            <li><a asp-controller="Receitas" asp-action="Escondidinho_de_frango_fit">Escondidinho de frango fit</a></li>
+            <li><a asp-controller="Receitas" asp-action="Kibe_de_ervilha_partida">Kibe vegetariano de ervilha</a></li>
+            <li><a asp-controller="Receitas" asp-action="Crocante_de_sementes">Crocantes de semente sem glútem</a></li>
+            <li><a asp-controller="Receitas" asp-action="Tortinhas_de_limao_maracuja_e_morango">Tortinhas de limão, maracujá e morango</a></li>
+            <li><a asp-controller="Receitas" asp-action="Moqueca_de_palmito_pupunha_com_banana_da_terra">Moqueca de pupunha e banana da terra</a></li>
+            <li><a asp-controller="Receitas" asp-action="Crumble_low_carb_com_legumes">Crumble low carb com legumes</a></li>
+            <li><a asp-controller="Receitas" asp-action="Queijo_vegano">Queijo vegano</a></li>
+            <li><a asp-controller="Receitas" asp-action="Mais_receitas">Mais receitas</a></li>
         </ul>
     </div>
     <div class="col-md-3">
@@ -69,6 +78,7 @@
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
             <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+
         </ul>
     </div>
     <div class="col-md-3">
