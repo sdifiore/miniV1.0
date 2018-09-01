@@ -62,6 +62,16 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Homus_funcional()
+        {
+            return View();
+        }
+
+        public IActionResult Isotonico_caseiro()
+        {
+            return View();
+        }
+
         public IActionResult Kibe_de_ervilha_partida()
         {
             return View();
