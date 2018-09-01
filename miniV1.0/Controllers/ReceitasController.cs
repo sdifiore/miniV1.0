@@ -32,7 +32,7 @@ namespace miniV1.Controllers
             return View();
         }
 
-        public IActionResult Crocante_de_sementes()
+        public IActionResult Crocante_de_sementes_sem_glutem()
         {
             return View();
         }
