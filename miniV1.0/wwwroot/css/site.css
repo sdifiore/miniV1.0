@@ -35,3 +35,8 @@ body {
         display: none;
     }
 }
+
+div.margin-left {
+    position: relative;
+    left: -2%;
+}
