@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using miniV1.Models;
 using miniV1.Persistence;
 
 namespace miniV1._0
@@ -34,6 +35,7 @@ namespace miniV1._0
             });
 
 
+            //services.Configure<ManuelaIbiEmail>(Configuration.GetSection("ManuelaIbiEmail"));
             services.AddDbContext<MiniDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
