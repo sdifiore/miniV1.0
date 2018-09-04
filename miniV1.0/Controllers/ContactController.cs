@@ -1,49 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.Options;
-using Microsoft.Extensions.Options;
+using miniV1.Core;
 using miniV1.Models;
-using System.Net;
-using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace miniV1.Controllers
 {
     public class ContactController : Controller
     {
-        private readonly ManuelaIbiEmail manuelaIbiEmail;
+        private readonly IEmail email;
 
-        public ContactController(IOptions<ManuelaIbiEmail> manuelaIbiEmail)
+        public ContactController(IEmail email)
         {
-            this.manuelaIbiEmail.Username = manuelaIbiEmail.Value.Username;
-            this.manuelaIbiEmail.Password = manuelaIbiEmail.Value.Password;
+            this.email = email;
         }
 
         public IActionResult Contact()
         {
+            if (ViewData["EmailEnviado"] == null)
+                ViewData["EmailEnviado"] = "false";
+
             return View(new Contato());
         }
-    
+
         [HttpPost]
-        public async Task<IActionResult> ContactAsync(Contato contato)
+        public async Task<IActionResult> Contact(Contato contato)
         {
-            var smtpClient = new SmtpClient
-            {
-                Host = "smtp.sendgrid.net",
-                Port = 587,
-                EnableSsl = true,
-                Credentials = new NetworkCredential(manuelaIbiEmail.Username, manuelaIbiEmail.Password)
-            };
+            await email.SendAsync(contato);
 
-            using (var message = new MailMessage(contato.Email, "manuelaibi66@gmail.com")
-            {
-                Subject = "Email de Manuela Ibi Nutrição Integrada",
-                Body = $"{contato.Comentario}\nTelefone: {contato.Telefone}"
-            })
-            {
-                await smtpClient.SendMailAsync(message);
-            }
+            ViewData["EmailEnviado"] = true;
 
-            return Ok();
+            return RedirectToAction("Contact");
         }
     }
 }

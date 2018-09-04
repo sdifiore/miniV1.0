@@ -8,8 +8,10 @@
 <partial name="../Shared/LogoView.cshtml" />
 
 <address>
-    Rua Quintino Bocaiuva, 1019<br />
-    Centro - Botucatu - SP<br />
+    Lis Saúde e Bem estar<br />
+    Rua Damião Pinheiro Machado 658<br />
+    Centro - Botucatu<br />
+    18603-560 São Paulo<br />
     <abbr title="Telefone fixo em Botucatu - SP">Tel:</abbr>
     (14) 3815-3120
 </address>
@@ -68,6 +70,16 @@
                 <button type="submit" class="btn btn-primary">Enviar <span class="glyphicon glyphicon-send"></span></button>
             </div>
         </div>
+
+        @{
+            if ((string)ViewData["EmailEnviado"] == "true")
+            {
+                <div class="alert alert-primary" role="alert">
+                    Mensagem enviada com sucesso!
+                </div>
+            }
+
+        }
 
     </form>
 </div>

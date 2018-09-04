@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using miniV1.Core;
 using miniV1.Models;
 using miniV1.Persistence;
+using miniV1.Services;
 
 namespace miniV1._0
 {
@@ -35,7 +32,8 @@ namespace miniV1._0
             });
 
 
-            //services.Configure<ManuelaIbiEmail>(Configuration.GetSection("ManuelaIbiEmail"));
+            services.AddScoped<IEmail, Email>();
+            services.Configure<ManuelaIbiEmail>(Configuration.GetSection("ManuelaIbiEmail"));
             services.AddDbContext<MiniDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
