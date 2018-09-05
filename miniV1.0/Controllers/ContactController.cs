@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using miniV1.Core;
 using miniV1.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace miniV1.Controllers
@@ -16,20 +18,27 @@ namespace miniV1.Controllers
 
         public IActionResult Contact()
         {
-            if (ViewData["EmailEnviado"] == null)
-                ViewData["EmailEnviado"] = "false";
+            if (HttpContext.Request.Cookies["EmailEnviado"] == "true")
+                ViewBag.Message = "<div class='alert alert-primary' role='alert'>Mensagem enviada com sucesso!</div>";
+            else
+                ViewBag.Message = "";
 
             return View(new Contato());
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Contact(Contato contato)
         {
             await email.SendAsync(contato);
 
-            ViewData["EmailEnviado"] = true;
+            var option = new CookieOptions();
+            option.Expires = DateTime.Now.AddMinutes(10);
+            Response.Cookies.Append("EmailEnviado", "true", option);
+            var boh = Request.Cookies["EmailEnviado"];
 
             return RedirectToAction("Contact");
         }
+
     }
 }

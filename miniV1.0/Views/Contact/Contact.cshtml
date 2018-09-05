@@ -71,15 +71,7 @@
             </div>
         </div>
 
-        @{
-            if ((string)ViewData["EmailEnviado"] == "true")
-            {
-                <div class="alert alert-primary" role="alert">
-                    Mensagem enviada com sucesso!
-                </div>
-            }
-
-        }
+       @ViewBag.Message
 
     </form>
 </div>

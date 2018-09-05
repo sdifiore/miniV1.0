@@ -18,10 +18,16 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Alcachofra_ao_molho_de_cebola_roxa()
+        {
+            return View();
+        }
+
         public IActionResult Bacalhau_com_requeijao_de_tofu_e_gengibre()
         {
             return View();
         }
+
         public IActionResult Bolo_nega_maluca()
         {
             return View();
@@ -58,6 +64,11 @@ namespace miniV1.Controllers
         }
 
         public IActionResult Fondue_fit_de_queijo()
+        {
+            return View();
+        }
+
+        public IActionResult Galette_de_sarraceno()
         {
             return View();
         }

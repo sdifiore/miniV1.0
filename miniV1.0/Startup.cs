@@ -5,10 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Session;
 using miniV1.Core;
 using miniV1.Models;
 using miniV1.Persistence;
 using miniV1.Services;
+using System;
 
 namespace miniV1._0
 {
@@ -31,11 +33,17 @@ namespace miniV1._0
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddDistributedMemoryCache();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);
+                options.Cookie.HttpOnly = true;
+            } );
             services.AddScoped<IEmail, Email>();
             services.Configure<ManuelaIbiEmail>(Configuration.GetSection("ManuelaIbiEmail"));
-            services.AddDbContext<MiniDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<MiniDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Mini")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +62,7 @@ namespace miniV1._0
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
