@@ -7,71 +7,72 @@
 
 <partial name="../Shared/LogoView.cshtml" />
 
-<address>
-    Lis Saúde e Bem estar<br />
-    Rua Damião Pinheiro Machado 658<br />
-    Centro - Botucatu<br />
-    18603-560 São Paulo<br />
-    <abbr title="Telefone fixo em Botucatu - SP">Tel:</abbr>
-    (14) 3815-3120
-</address>
-
-<address>
-    <strong>E-mail:</strong> <a href="mailto:manuelaibi66@gmail.com">manuelaibi66@gmail.com</a><br />
-</address>
-
 <div class="container margin-left">
-    <form class="form-horizontal" action="" method="post">
-        <p>Ou preencha o formulário abaixo que entraremos em contato!</p>
 
-        <div class="form-group">
-            <label class="control-label">Nome</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input name="nome" placeholder="Nome" class="form-control" type="text">
+    <address>
+        Lis Saúde e Bem estar<br />
+        Rua Damião Pinheiro Machado 658<br />
+        Centro - Botucatu<br />
+        18603-560 São Paulo<br />
+        <abbr title="Telefone fixo em Botucatu - SP">Tel:</abbr>
+        (14) 3815-3120
+    </address>
+
+    <div class="col-lg-9">
+        <form class="form-horizontal" action="" method="post">
+            <p>Ou preencha o formulário abaixo que entraremos em contato!</p>
+
+            <div class="form-group">
+                <label class="control-label">Nome</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="nome" placeholder="Nome" class="form-control" type="text">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="control-label">E-mail</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input name="email" placeholder="E-mail" class="form-control" type="text">
+            <div class="form-group">
+                <label class="control-label">E-mail</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="E-mail" class="form-control" type="text">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="control-label">Telefone</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                    <input name="telefone" placeholder="Telefone" class="form-control" type="text">
+            <div class="form-group">
+                <label class="control-label">Telefone</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input name="telefone" placeholder="Telefone" class="form-control" type="text">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="control-label">Seu comentário</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                    <textarea class="form-control" name="comentario" placeholder="Comentário"></textarea>
+            <div class="form-group">
+                <label class="control-label">Seu comentário</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                        <textarea class="form-control" name="comentario" placeholder="Comentário"></textarea>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="control-label"></label>
-            <div class="col-md-4">
-                <button type="submit" class="btn btn-primary">Enviar <span class="glyphicon glyphicon-send"></span></button>
+            <div class="form-group">
+                <label class="control-label"></label>
+                <div class="col-md-8">
+                    <button type="submit" class="btn btn-primary">Enviar <span class="glyphicon glyphicon-send"></span></button>
+                </div>
             </div>
-        </div>
 
-       @Html.Raw(ViewBag.Message)
-
-    </form>
+            @Html.Raw(ViewBag.Message)
+        </form>
+    </div>
+    <div class="col">
+        <img class="img-responsive" src="~/images/contato.png" />
+    </div>
 </div>
