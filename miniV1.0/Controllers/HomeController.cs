@@ -17,8 +17,23 @@ namespace miniV1._0.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Sobre Manuela Ibi Nutrição Integrada";
 
+            return View();
+        }
+
+        public IActionResult Atendimento()
+        {
+            return View();
+        }
+
+        public IActionResult Fitoterapia()
+        {
+            return View();
+        }
+
+        public IActionResult Servicos()
+        {
             return View();
         }
 
