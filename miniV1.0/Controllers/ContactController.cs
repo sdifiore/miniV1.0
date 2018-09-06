@@ -19,7 +19,7 @@ namespace miniV1.Controllers
         public IActionResult Contact()
         {
             if (HttpContext.Request.Cookies["EmailEnviado"] == "true")
-                ViewBag.Message = "<div class='alert alert-primary' role='alert'>Mensagem enviada com sucesso!</div>";
+                ViewBag.Message = "<div class='alert alert-success' role='alert'>Mensagem enviada com sucesso!</div>";
             else
                 ViewBag.Message = "";
 
@@ -33,7 +33,7 @@ namespace miniV1.Controllers
             await email.SendAsync(contato);
 
             var option = new CookieOptions();
-            option.Expires = DateTime.Now.AddMinutes(10);
+            option.Expires = DateTime.Now.AddSeconds(30);
             Response.Cookies.Append("EmailEnviado", "true", option);
             var boh = Request.Cookies["EmailEnviado"];
 
