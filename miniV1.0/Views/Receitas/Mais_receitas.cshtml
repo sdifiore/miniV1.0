@@ -8,42 +8,50 @@
 <partial name="../Shared/LogoView.cshtml" />
 
 <div class="container">
-    <h2>Todas as receitas por ordem alfabética</h2>
-    <div class="list-group">
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Alcachofra_ao_molho_de_cebola_roxa">Alcachofra ao molho de cebola roxa</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Bacalhau_com_requeijao_de_tofu_e_gengibre">Bacalhau com requeij&atilde;o de tofu & gengibre</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Bolo_nega_maluca">Bolo nega maluca</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Coscous_couve_flor">Coscous de couve-flor</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Crocante_de_sementes_sem_glutem">Crocantes de semente sem gl&uacute;tem – Salgadinho sem glútem</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Crumble_low_carb_com_legumes">Crumble low carb com legumes</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Escondidinho_de_carne">Escondidinho de carne</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Escondidinho_de_frango_fit">Escondidinho de frango fit</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Fondue_fit_de_chocolate">Fondue fit de chocolate</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Fondue_fit_de_queijo">Fondue fit de queijo</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Galette_de_sarraceno">Galette de sarraceno</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Homus_funcional">Homus funcional</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Isotonico_caseiro">Isotônico caseiro </a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Kibe_de_ervilha_partida">Kibe de ervilha partida (vegano)</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Maionese_de_abacate">Maionese de abacate</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Maionese_de_tofu">Maionese de tofu</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Maionese_de_tofu_e_abacate_ao_wassabi">Maionese de tofu & abacate ao wassabi</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Mandioqueijo_Queijo_de_mandioca">Mandioqueijo: Queijo de mandioca</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Moqueca_de_palmito_pupunha_com_banana_da_terra">Moqueca de pupunha e banana da terra</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Muffins_de_batata_doce">Muffins de batata doce </a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Muffins_de_canela">Muffins de canela </a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Nutella_funcional">Nutella funcional </a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Panqueca_de_cacau_sacietogenica">Panqueca de cacau sacietog&ecirc;nica</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Panqueca_de_microondas">Panqueca de micro-ondas</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_batata_doce">P&atilde;o de batata doce</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_chia">P&atilde;o de chia</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_espinafre">P&atilde;o de espinafre</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_frigideira">P&atilde;o de frigideira</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_sem_gluten_de_milho_de_micro_ondas">P&atilde;o sem gl&uacute;tem de milho de micro-ondas </a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Queijo_vegano">Queijo vegano</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Smoothie_de_banana_e_maca">Smoothie de banana e ma&ccedil;&atilde;</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Smoothie_de_cacau">Smoothie de cacau</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Torta_de_banana_funcional">Torta de banana funcional</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Tortinha_de_cebola_pure_rustico_agridoce">Tortinha de cebola com pur&ecirc; r&uacute;stico agridoce: (crocante fora, molinha dentro)</a>
-        <a class="list-group-item" asp-controller="Receitas" asp-action="Tortinhas_de_limao_maracuja_e_morango">Tortinhas de lim&atilde;o, maracuj&aacute; e morango</a>
+    <div class="row">
+        <div class="col-lg-9">
+            <h2>Todas as receitas por ordem alfabética</h2>
+            <div class="list-group">
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Alcachofra_ao_molho_de_cebola_roxa">Alcachofra ao molho de cebola roxa</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Bacalhau_com_requeijao_de_tofu_e_gengibre">Bacalhau com requeij&atilde;o de tofu & gengibre</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Bolo_nega_maluca">Bolo nega maluca</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Coscous_couve_flor">Coscous de couve-flor</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Crocante_de_sementes_sem_glutem">Crocantes de semente sem gl&uacute;tem – Salgadinho sem glútem</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Crumble_low_carb_com_legumes">Crumble low carb com legumes</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Escondidinho_de_carne">Escondidinho de carne</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Escondidinho_de_frango_fit">Escondidinho de frango fit</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Fondue_fit_de_chocolate">Fondue fit de chocolate</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Fondue_fit_de_queijo">Fondue fit de queijo</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Galette_de_sarraceno">Galette de sarraceno</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Homus_funcional">Homus funcional</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Isotonico_caseiro">Isotônico caseiro </a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Kibe_de_ervilha_partida">Kibe de ervilha partida (vegano)</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Maionese_de_abacate">Maionese de abacate</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Maionese_de_tofu">Maionese de tofu</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Maionese_de_tofu_e_abacate_ao_wassabi">Maionese de tofu & abacate ao wassabi</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Mandioqueijo_Queijo_de_mandioca">Mandioqueijo: Queijo de mandioca</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Moqueca_de_palmito_pupunha_com_banana_da_terra">Moqueca de pupunha e banana da terra</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Muffins_de_batata_doce">Muffins de batata doce </a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Muffins_de_canela">Muffins de canela </a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Nutella_funcional">Nutella funcional </a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Panqueca_de_cacau_sacietogenica">Panqueca de cacau sacietog&ecirc;nica</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Panqueca_de_microondas">Panqueca de micro-ondas</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_batata_doce">P&atilde;o de batata doce</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_chia">P&atilde;o de chia</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_espinafre">P&atilde;o de espinafre</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_de_frigideira">P&atilde;o de frigideira</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Pao_sem_gluten_de_milho_de_micro_ondas">P&atilde;o sem gl&uacute;tem de milho de micro-ondas </a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Queijo_vegano">Queijo vegano</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Smoothie_de_banana_e_maca">Smoothie de banana e ma&ccedil;&atilde;</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Smoothie_de_cacau">Smoothie de cacau</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Torta_de_banana_funcional">Torta de banana funcional</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Tortinha_de_cebola_pure_rustico_agridoce">Tortinha de cebola com pur&ecirc; r&uacute;stico agridoce: (crocante fora, molinha dentro)</a>
+                <a class="list-group-item" asp-controller="Receitas" asp-action="Tortinhas_de_limao_maracuja_e_morango">Tortinhas de lim&atilde;o, maracuj&aacute; e morango</a>
+            </div>
+        </div>
+        <div class="col">
+            <p></p>
+            <img class="img-responsive" src="~/images/manuela_ibi_chef_250.jpg" />
+        </div>
     </div>
 </div>
