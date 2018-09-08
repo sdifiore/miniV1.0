@@ -36,7 +36,7 @@ namespace miniV1.Controllers
             }
             catch (Exception)
             {
-                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Preencha todos os campos e o e-mail deve ser válido</div>";
+                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Preencha todos os campos além de fornecer um e-mail válido</div>";
 
                 return View(new Contato());
             }
