@@ -30,6 +30,13 @@ namespace miniV1.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Contact(Contato contato)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Preencha todos os campos</div>";
+
+                return View(new Contato());
+            }
+
             await email.SendAsync(contato);
 
             var option = new CookieOptions();
