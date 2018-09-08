@@ -14,6 +14,7 @@ namespace miniV1.Models
 
         public string Telefone { get; set; }
 
+        [Required]
         public string Comentario { get; set; }
     }
 }

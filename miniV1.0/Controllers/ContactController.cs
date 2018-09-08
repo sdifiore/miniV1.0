@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using miniV1.Core;
 using miniV1.Models;
 using System;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace miniV1.Controllers
@@ -30,13 +31,27 @@ namespace miniV1.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Contact(Contato contato)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Os campos Nome, E-mail e Contato são obrigatórios</div>";
+
+                return View(new Contato());
+            }
+
+            if (!IsValidEmail(contato.Email))
+            {
+                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Forneça um endereço válido para o e-mail</div>";
+
+                return View(new Contato());
+            }
+
             try
             {
                 await email.SendAsync(contato);
             }
-            catch (Exception)
+            catch
             {
-                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Preencha todos os campos além de fornecer um e-mail válido</div>";
+                ViewBag.Message = "<div class='alert alert-danger' role='alert'>Ocorreu um erro desconhecido. Tente novamente</div>";
 
                 return View(new Contato());
             }
@@ -47,6 +62,19 @@ namespace miniV1.Controllers
             var boh = Request.Cookies["EmailEnviado"];
 
             return RedirectToAction("Contact");
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var address = new MailAddress(email);
+                return address.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
     }
