@@ -28,7 +28,17 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Bolo_de_cacau_e_aveia()
+        {
+            return View();
+        }
+
         public IActionResult Bolo_nega_maluca()
+        {
+            return View();
+        }
+
+        public IActionResult Bolo_salgado_de_quinoa_e_atum_sem_gluten()
         {
             return View();
         }
@@ -73,7 +83,17 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Golden_milk()
+        {
+            return View();
+        }
+
         public IActionResult Homus_funcional()
+        {
+            return View();
+        }
+
+        public IActionResult Hamburguer_de_feijao()
         {
             return View();
         }
@@ -104,6 +124,21 @@ namespace miniV1.Controllers
         }
 
         public IActionResult Mandioqueijo_Queijo_de_mandioca()
+        {
+            return View();
+        }
+
+        public IActionResult Mini_bolinhos_de_chocolate_do_bem()
+        {
+            return View();
+        }
+
+        public IActionResult Molho_para_salada_Alho_com_iogurte()
+        {
+            return View();
+        }
+
+        public IActionResult Molho_para_salada_Mostarda()
         {
             return View();
         }
