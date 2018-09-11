@@ -40,3 +40,28 @@ div.margin-left {
     position: relative;
     left: -2%;
 }
+
+table {
+    width: 100%;
+}
+
+.twenty {
+    width: 20%;
+}
+
+.eigthy {
+    width: 80%;
+}
+
+.sixty {
+    width: 60%;
+}
+
+.forty {
+    width: 40%;
+}
+
+p {
+    display: inline-block;
+    font-size: large;
+}
