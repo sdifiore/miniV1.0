@@ -33,12 +33,22 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Bolo_de_coco_com_palatinose()
+        {
+            return View();
+        }
+
         public IActionResult Bolo_nega_maluca()
         {
             return View();
         }
 
         public IActionResult Bolo_salgado_de_quinoa_e_atum_sem_gluten()
+        {
+            return View();
+        }
+
+        public IActionResult Brownie_de_abobora()
         {
             return View();
         }
@@ -194,6 +204,11 @@ namespace miniV1.Controllers
         }
 
         public IActionResult Pao_sem_gluten_de_milho_de_micro_ondas()
+        {
+            return View();
+        }
+
+        public IActionResult Pizza_sem_gluten_de_quinua()
         {
             return View();
         }

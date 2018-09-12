@@ -9,6 +9,7 @@
     <None Include="wwwroot\images\Maionese_de_tofu_e_abacate_ao_wassabi_400.jpg" />
     <None Include="wwwroot\images\Muffins_de_canela_400.jpg" />
     <None Include="wwwroot\images\Pao_sem_glúten_de_milho_de_micro_ondas_400.jpg" />
+    <None Include="wwwroot\images\Pizza_sem_gluten_de_quinua_400.jpg" />
   </ItemGroup>
 
   <ItemGroup>
