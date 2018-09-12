@@ -43,6 +43,11 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Bolo_de_Reis()
+        {
+            return View();
+        }
+
         public IActionResult Bolo_salgado_de_quinoa_e_atum_sem_gluten()
         {
             return View();
@@ -98,12 +103,17 @@ namespace miniV1.Controllers
             return View();
         }
 
-        public IActionResult Homus_funcional()
+        public IActionResult Hamburguer_de_abobora()
         {
             return View();
         }
 
         public IActionResult Hamburguer_de_feijao()
+        {
+            return View();
+        }
+
+        public IActionResult Homus_funcional()
         {
             return View();
         }
@@ -114,6 +124,16 @@ namespace miniV1.Controllers
         }
 
         public IActionResult Kibe_de_ervilha_partida()
+        {
+            return View();
+        }
+
+        public IActionResult Kibe_de_peixe()
+        {
+            return View();
+        }
+
+        public IActionResult Leite_de_aveia()
         {
             return View();
         }
@@ -143,6 +163,11 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Mini_sufles_de_abobora()
+        {
+            return View();
+        }
+
         public IActionResult Molho_para_salada_Alho_com_iogurte()
         {
             return View();
@@ -154,6 +179,11 @@ namespace miniV1.Controllers
         }
 
         public IActionResult Moqueca_de_palmito_pupunha_com_banana_da_terra()
+        {
+            return View();
+        }
+
+        public IActionResult Mousse_de_cacau()
         {
             return View();
         }
