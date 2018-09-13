@@ -58,6 +58,11 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Cloud_bread()
+        {
+            return View();
+        }
+
         public IActionResult Coscous_couve_flor()
         {
             return View();
@@ -163,6 +168,11 @@ namespace miniV1.Controllers
             return View();
         }
 
+        public IActionResult Mini_cuscuz_de_legumes_e_salvia()
+        {
+            return View();
+        }
+
         public IActionResult Mini_sufles_de_abobora()
         {
             return View();
@@ -234,6 +244,11 @@ namespace miniV1.Controllers
         }
 
         public IActionResult Pao_sem_gluten_de_milho_de_micro_ondas()
+        {
+            return View();
+        }
+
+        public IActionResult Pizza_de_omelete()
         {
             return View();
         }
